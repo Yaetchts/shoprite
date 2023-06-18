@@ -1,0 +1,49 @@
+<html>
+<head>
+    <link rel="shortcut icon" href="https://drive.google.com/uc?id=1ALewGHPejcax5K-0TikzK8apX3shaeEZ">
+<title>
+  Login
+</title>
+
+<style>
+    body{
+        background-image: url("earth\ wallpaper.jpg");
+        color: aliceblue;
+    }
+    .position{
+        position: absolute;
+        top: 20px;
+        left: 900px;
+    }
+    
+    
+</style>
+
+<script>
+    function redirectToPage() {
+        var agentID = document.getElementById("agentID").value;
+
+        if (agentID === "012345") {
+            window.location.href = "2.html";
+        } else {
+            alert("Thank you for shopping with us.");
+            window.location.href = "https://www.shoprite.co.za/";
+        }
+    }
+</script>
+
+</head>
+<body>
+    
+<h1>   </h1>
+
+<img src="IMG_20220311_135742_708.jpg" alt="" height="100" width="100">
+
+<img src="putin.jpg" alt="" class="position" height="150px" width="160px"> 
+<h3>Login </h3>
+
+<input id="agentID" type="text" placeholder="Enter Agent ID">
+<input type="submit" value="Enter" onclick="redirectToPage()">
+
+</body>
+</html>

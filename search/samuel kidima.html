@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+body{
+background-color:black;
+color:white;}
+</style>
+
+
+<script>
+  function validateInvestigationNumber() {
+    var input = document.getElementById("investigationNumber").value;
+    if (input === "1234") {
+      window.location.href = "3.html"; // Redirect to Agent page
+    } else {
+      document.getElementById("error").textContent = "Invalid investigation number";
+    }
+  }
+</script>
+
+
+</head>
+<body>
+<h1>Welcome, Agent #samuel kidima :</h2>
+<img src="https://th.bing.com/th/id/R.4f21bdc3d70db55cc4174ae1e81d5378?rik=GalMIMU8fRz%2fhQ&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fiLbCemV.jpg&ehk=42KgoPcWaHSclXMdo14LgLdqHmBpFDELT1GnjfaZnak%3d&risl=&pid=ImgRaw&r=0"/>
+
+<p style="position: absolute;top:-18px;left:600px;">Enter Agent ID </p>
+    
+<label for="investigationNumber" style="position: absolute;top:20px;left:600px;"></label>
+<input type="text" id="investigationNumber" name="investigationNumber" style="position: absolute;top:100px;left:0px;">
+<button onclick="validateInvestigationNumber()"  style="position: absolute;top:400px;left:0px;">Enter</button>
+<p id="error"></p>
+
+    
+  
+  
+
+
+</body>
+</html>

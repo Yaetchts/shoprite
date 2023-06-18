@@ -1,0 +1,134 @@
+<html lang="en" class=" -webkit-">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>CodePen - Hacker-Style loading</title>
+<link rel="canonical" href="https://codepen.io/carlos-richard-mattos/pen/gJpBWR">
+<link rel="shortcut icon" href="https://drive.google.com/uc?id=1bcGSmAqK17_n8TN0aAmtYi830umpNwN1" type="image/x-icon">
+<style media="" data-href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+
+  article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display: block;
+  }
+
+  body {
+    background-color: black;
+    color: #000080;
+    font-family: Consolas, Courier, monospace;
+    font-size: 60px;
+    text-shadow: 0 0 15px #000080;
+    height: 100%;
+    
+    
+  }
+
+  div {
+    position: relative;
+    top: 300px;
+    margin: -30px auto;
+    text-align: center;
+  }
+
+  .glow {
+    color: #0000FF;
+    text-shadow: 0px 0px 10px #0000FF;
+  }
+
+  span {
+    display: inline-block;
+    padding: 0 10px;
+  }
+
+  
+</style>
+
+
+<script>
+  setTimeout(function() {
+  window.location.href = "../../1.html";
+}, 6000); // 6000 milliseconds = 6 seconds
+
+</script>
+</head>
+
+<body translate="no">
+  <div id="loading">
+    <span class="">B</span>
+    <span class="">A</span>
+    <span class="">D</span>
+    <span class=""> </span>
+    <span class="">D</span>
+    <span class="">A</span>
+    <span class="">T</span>
+    <span class="">A</span>
+    <span class=""> </span>
+    <span class="">E</span>
+    <span class="">N</span>
+    <span class="">T</span>
+    <span class="">R</span>
+    <span class="">Y</span>
+  </div>
+
+
+  <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.download"></script>
+  <script src="./jquery.min.js.download"></script>
+
+  <script id="rendered-js">
+    alphabet = new Array("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0");
+    letter_count = 0;
+    el = $("#loading");
+    word = el.html().trim();
+    finished = false;
+
+    el.html("connecting");
+    for (var i = 0; i < word.length; i++) {
+      if (window.CP.shouldStopExecution(0)) break;
+      el.append("<span>" + word.charAt(i) + "</span>");
+    }
+    window.CP.exitedLoop(0);
+
+    setTimeout(write, 75);
+    incrementer = setTimeout(inc, 1000);
+
+    function write() {
+      for (var i = letter_count; i < word.length; i++) {
+        if (window.CP.shouldStopExecution(1)) break;
+        var c = Math.floor(Math.random() * 36);
+        $("span")[i].innerHTML = alphabet[c];
+      }
+      window.CP.exitedLoop(1);
+      if (!finished) {
+        setTimeout(write, 75);
+      }
+    }
+
+    function inc() {
+      $("span")[letter_count].innerHTML = word[letter_count];
+      $("span:eq(" + letter_count + ")").addClass("glow");
+      letter_count++;
+      if (letter_count >= word.length) {
+        finished = true;
+        setTimeout(reset, 1500);
+      } else {
+        setTimeout(inc, 1000);
+      }
+    }
+
+    function reset() {
+      letter_count = 0;
+      finished = false;
+      setTimeout(inc, 1000);
+      setTimeout(write, 75);
+      $("span").removeClass("glow");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" href="fbi.jfif">
+  <title>Submit Password</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+background-color:black;
+color:lightblue;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+
+
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+.blue{
+  color:blue;
+}
+</style>
+</head>
+<body>
+<h1>Please Submit an ID<span style="position: absolute;top:300px;left: 800px;">South African ID Number</span>  :  </h2>
+  
+  <h3>You are currently in : <span class="blue">Submit Intel</span>:ID  </h3>
+<img src="https://th.bing.com/th/id/R.4f21bdc3d70db55cc4174ae1e81d5378?rik=GalMIMU8fRz%2fhQ&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fiLbCemV.jpg&ehk=42KgoPcWaHSclXMdo14LgLdqHmBpFDELT1GnjfaZnak%3d&risl=&pid=ImgRaw&r=0" height="300" width="300"/>
+
+<form action="/action_page.php" method="post">
+  <div class="imgcontainer">
+    
+  </div>
+
+<h2>Please submit your intel </h2>
+
+  <div class="container">
+    <label for="uname"><b>ID holder name</b></label>
+    <input type="text" placeholder="i.e Eden Snow " required>
+
+    <label for="psw"><b>Date issued</b></label>
+    <input type="password" placeholder="i.e 1999" name="psw" required>
+        
+        <label for="uname"><b>Id number</b></label>
+    <input type="text" placeholder="i.e 1223456567552" name="uname" required>
+        <label>
+      <input type="checkbox"  name="remember">Get paid
+    </label>
+    <button type="submit">Submit  information</button>
+    
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <a href="intel pricing.html">
+      <button type="button" class="cancelbtn" >View intel  pricing </button>
+    </a>
+    
+    <span class="psw">Forgot <a href="What info do you want to submit.html">Submit more intel</a></span>
+  </div>
+</form>
+
+</body>
+</html>

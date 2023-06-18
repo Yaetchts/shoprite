@@ -1,0 +1,59 @@
+<html>
+<head>
+  <title>Verify Name</title>
+  <link rel="shortcut icon" href="https://drive.google.com/uc?id=1ALewGHPejcax5K-0TikzK8apX3shaeEZ">
+ <style>
+  body{
+    background-color:black;
+    color:blue;
+  }
+ </style>
+  
+</head>
+<h1>What is your name? We need to verify you: </h1>
+<body>
+  <img src="fbi.jfif" alt="" height="100" width="100"><br><br>
+  <img src="https://th.bing.com/th?id=ALSTUB115F30844CE5A5C6568666133D9ED3F9C829A28000E75886B53346BB20DE20D&w=75&h=49&rs=2&o=6&pid=SANGAM" alt="" style="position: absolute;top:100px;left:180px;">
+  
+  <div id="search-container">
+    <input type="text" id="search-input" placeholder="Agent Name : South Africa ">
+    <button id="payout-button">Enter</button>
+  </div>
+
+  <div id="search-results"></div>
+
+  <script>
+    // Get the elements
+    const searchInput = document.getElementById('search-input');
+    const payoutButton = document.getElementById('payout-button');
+    const searchResults = document.getElementById('search-results');
+
+    // Function to handle payout calculation
+    function calculatePayout() {
+      const searchText = searchInput.value;
+
+      // Clear previous search results
+      searchResults.innerHTML = '';
+
+      // Redirect or display "name not found" message
+      if (searchText.toLowerCase() === 'samuel kidima') {
+        window.location.href = 'search/index.html';
+      } else if (searchText.toLowerCase() === 'rice') {
+        window.location.href = '2.html';
+      } else if (searchText.toLowerCase() === 'butcher') {
+        window.location.href = '3.html';
+      } else {
+        const notFoundMessage = document.createElement('p');
+        notFoundMessage.textContent = 'Name  not part of South African agents ...';
+        searchResults.appendChild(notFoundMessage);
+      }
+    }
+
+    // Add event listener to payout button
+    payoutButton.addEventListener('click', calculatePayout);
+
+  </script>
+
+  
+</body>
+</html>
