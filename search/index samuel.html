@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+  <title>Validating agent </title>
+  <link rel="shortcut icon" href="https://drive.google.com/uc?id=1ALewGHPejcax5K-0TikzK8apX3shaeEZ">
+
+  <meta name="robots" content="noindex">
+
+  
+  <link rel="mask-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  <link rel="canonical" href="https://codepen.io/tuckermassad/pen/WNaWqMQ">
+
+  
+  
+
+  <style id="INLINE_PEN_STYLESHEET_ID">
+    body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, #2e2150, #2a1d4c, #271948, #231645, #1f1241);
+}
+.container {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  top: -125px;
+  height: 300px;
+  width: 300px;
+}
+.container .contact-card {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 120px;
+  background-color: #fcecf3;
+  border-radius: 4px;
+  border-bottom: 8px solid #d2afd3;
+  animation: contact-card-animate 3s ease-in-out infinite;
+  overflow: hidden;
+  opacity: 0;
+}
+.container .contact-card:nth-child(2) {
+  animation-delay: 1.5s;
+}
+.container .contact-card .avatar {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  left: -125px;
+  width: 65px;
+  height: 65px;
+  background-color: #d2afd3;
+  border-radius: 4px;
+  z-index: 3;
+}
+.container .contact-card .avatar::before {
+  content: "";
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  top: -15px;
+  height: 22.5px;
+  width: 22.5px;
+  background-color: #996aa9;
+  border-radius: 50%;
+}
+.container .contact-card .avatar::after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  top: 40px;
+  height: 25px;
+  width: 40px;
+  background-color: #996aa9;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+.container .contact-card .text {
+  position: absolute;
+  top: 42.5px;
+  right: 40px;
+  width: 100px;
+  height: 7.5px;
+  background-color: #996aa9;
+}
+.container .contact-card .text::before {
+  content: "";
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  top: 17.5px;
+  width: 120px;
+  height: 7.5px;
+  background-color: #996aa9;
+}
+.container .contact-card .text::after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  top: 32.5px;
+  width: 110px;
+  height: 7.5px;
+  background-color: #996aa9;
+}
+@keyframes contact-card-animate {
+  0% {
+    opacity: 0;
+    top: -300px;
+    width: 0px;
+  }
+  1% {
+    opacity: 1;
+    top: -300px;
+    width: 0px;
+  }
+  10% {
+    top: -300px;
+    width: 250px;
+  }
+  20% {
+    top: 0px;
+    width: 250px;
+  }
+  25% {
+    top: 0px;
+    width: 250px;
+  }
+  35% {
+    top: 0px;
+    width: 250px;
+  }
+  50% {
+    top: 300px;
+    width: 250px;
+  }
+  65% {
+    opacity: 1;
+    top: 300px;
+    width: 0px;
+  }
+  100% {
+    opacity: 0;
+    top: 300px;
+    width: 0px;
+  }
+}
+.container #magnifying-glass {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  border: 14px solid #6fc5d3;
+  border-radius: 50%;
+  animation: magnifying-glass-animate 1.5s ease-in-out infinite;
+  animation-delay: 0.375s;
+  transform: rotate(37.5deg);
+  left: 150px;
+  top: 0;
+}
+.container #magnifying-glass::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: -5px;
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  opacity: 0.8;
+  border-left: 6px solid white;
+  transform: rotate(15deg);
+}
+.container #magnifying-glass::after {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: -5px;
+  height: 160px;
+  width: 160px;
+  border-radius: 50%;
+  opacity: 0.8;
+  border-right: 6px solid white;
+  transform: rotate(15deg);
+}
+.container #magnifying-glass #glass {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: white;
+  opacity: 0.35;
+}
+.container #magnifying-glass #handle {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100px;
+  width: 35px;
+  border-radius: 7.5px;
+  background-color: #6fc5d3;
+  top: 240px;
+}
+.container #magnifying-glass #handle::after {
+  content: "";
+  position: absolute;
+  border-top-right-radius: 30px;
+  left: 5px;
+  top: -20px;
+  height: 30px;
+  width: 20px;
+  background-color: #5fa8b4;
+}
+.container #magnifying-glass #handle #handle-inner {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 92px;
+  left: -7.5px;
+  top: -7.5px;
+  width: 27.5px;
+  border-top-left-radius: 7.5px;
+  border-bottom-right-radius: 17.5px;
+  background-color: #a7d9e1;
+  z-index: 2;
+}
+.container #magnifying-glass #handle #handle-inner::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0px;
+  top: 34px;
+  height: 8px;
+  width: 27.5px;
+  background-color: #6fc5d3;
+  z-index: 1;
+}
+.container #magnifying-glass #handle #handle-inner::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: 0px;
+  top: 20px;
+  height: 8px;
+  width: 27.5px;
+  background-color: #6fc5d3;
+  z-index: 1;
+}
+@keyframes magnifying-glass-animate {
+  0% {
+    transform: rotate(37.5deg);
+    left: 150px;
+    top: 0;
+  }
+  10% {
+    transform: rotate(37.5deg);
+    left: 150px;
+    top: 0;
+  }
+  50% {
+    transform: rotate(5deg);
+    left: -150px;
+    top: 0;
+  }
+  75% {
+    transform: rotate(5deg);
+    left: -150px;
+    top: 0;
+  }
+  82.5% {
+    top: 27.5px;
+  }
+  90% {
+    transform: rotate(37.5deg);
+    left: 150px;
+    top: 0;
+  }
+  100% {
+    transform: rotate(37.5deg);
+    left: 150px;
+    top: 0;
+  }
+}
+
+
+      .red{color:red;}
+    </style>
+  
+
+  
+
+<script>
+  setTimeout(function() {
+    window.location.href = "verifed_files/verifed sam.html";
+  }, 6000); // 6000 milliseconds = 6 seconds
+</script>
+</head>
+
+<body>
+  
+  
+    
+  
+  
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALkAAAB7CAMAAAAfU9HRAAAA0lBMVEUAek0AI5XeODH///8AAAD/thI9i2cAd0jbAAAAAIcAd08AeE7/uRL/ugkAdVAAAI8AbzoAc0Eiek3/vhMAaS/AoiwAGpPeMSrdJRzy9/UAFJL32dhsikKznjDa5uCWuaZ/jj72tRRnSQetfAzy8/hdmXufv6/hUk2qxrbl7ej98/MvfUtPkG3iXFjcHRHmrxztpqQgFgJ5Vwm/iQ6GsJvipBA3RKCgosuMkcLS1OZQVKbzxsXpi4jrlJL54+PgR0IWEAErHgPf4e0uO52Dh77Dxt+0FxMwAAAEPklEQVR4nNWciVLbMBBABZExIQ4k3OVom5CelCsUAm1pKbT//0tVcCaVVnYsWZZ2tV/w5s0bWZYPxoomffepJc/3s/NlalMIzlh/872C/vnH6h42KpgScsZ6K68V9sMP+9is6pSSs37no6r9gZb2cvKpdrX2wzNK2heRs3TzDV3tC8lFMl/I1l5Bzvop1dqryOnWXk1OtXYD8oLaKWg3IidZuxm5YCdXuyk5S1NQ+yWydnbaMdZOq3Z2cbRurL2vbiBbD+eI2lmSHW+uGWsHG8ifiJdUliRdG+10ahfkyVR7fLW/kNtp78Ha91G05+RibLTD2n9haJ+T22lXa29h1D4nj652idxW+yvc2tmgm8jaWW3toWtnVydbmaz9rUPtQS+pjPPxQEK3W2QwaxfknF/LxbjVvhdM+ws5HyZK7TudCGrPyfmjUnsmajdlT7eB9stAi8yM3Kl2eAIZpvY5uag9kxeZwZHx3jftfQXaQ9QukfOhurbvrBlr7yEchcnknJ/I2rOBS+3etavkonZZu1PtvrUDcpfat2Hty161a+RC+5ZS+7oxu167z6dLOjnQbld7QO1F5EB7cmxxSdVq96a9kBwsMt2MYu0l5I3WvuplysiF9kSt3fi6pGn3M+Xk4pKqaLepHWgPTe5SO9zJhCbXal+rXXtocsq1V5FrtVsc/PrVXkkON5Bkajcg5+MbtfYOidpNyMVOBtRuvECm/RVfY0buUHvqawzJ+SO4XToyvy75GkNyWHt3x1w7Nrm+tiNrtyDnQ7DInKJqtyHnV/BwAFO7FTnU3sXUbkmun8mgabcmJ6Pdnlyv3fwYD5l8qr2rasdAr0XOf98kMvpFNOTDmyxK59F2Hu3aEut6TmjHaMUNC0fdpduAR7tXJFO4JTksnEVyT6Tdh+Ks4fbk0d77wydHsZy3RHvGFeu5Yv3CPR+hV56f190WIp+fR/vMormnomHJHZ5E4z6bg2fmdApfTN7cM+j727aXKSG/bqzwye7Bkpfx/K7F/fOGH+5icof3W8DbXJMlT8ILycdJc4V7E15E3tx7XN4KLyRv7t05v8I18gYL9ysckI+Tpt4RffK3pBSRO7yXC4Tf7e56B/9Prr4L7fKdi/fCFfJH7WuL+oW3fRcukyvv/Gcur2yFKFwib+47iyCFz8kbLPxbKOFTcvg9kcPXc5ONMIXPyBv7huvpuR2QW5A3VvhBsMI18mgKB+RWwvuohQNyh21h6MJlcqfvoIMXLpFHVvic3OV7/9FkA0X4C7nLPxaebjEKn5FbCVcLH92hCZ+S1/+XCFrhM3Jz4aDwuzaicAty+M+cQDc+zuTwP0W4hVuQEyvcmJxc4flUg8N/oOEXnk9lKAQLz6dKOM5ZisksFg7+ODf6Q6LwfKwKp7CkzGeRcFg4IeFLC8jhv1sJFZ5PqXCwLaRUeD7F4PAfxX+pCRfzDyRXDRhrXCnyAAAAAElFTkSuQmCC "
+<h1 class="red"></h1>
+<h1 class="red">Searching South African Agents DataBase:</h1>
+<div class="container">
+  <div class="contact-card">
+    <div class="avatar"></div>
+    <div class="text"></div>
+  </div>
+  <div class="contact-card">
+    <div class="avatar"></div>
+    <div class="text"></div>
+  </div>
+  <div id="magnifying-glass">
+    <div id="glass"></div>
+    <div id="handle">
+      <div id="handle-inner"  div=>
+    </div>
+  </div>
+</div>
+  
+  
+<script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.download"></script>
+  <script src="./pen.js.download" crossorigin=""></script>
+
+
+</div>
+</body>
+</html>
