@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message Table</title>
+    <style>
+        /* Styling for the pop-up */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+        }
+        body{
+            background-image: url("https://imgs.search.brave.com/6yZ7Ha3MnyrnzKaCdso7LEDC2a5sfsLpZaLe4MM65jE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDY1NDU0/OTcuanBn");
+            color:red;
+        }
+    </style>
+    
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <bold>You have a have a new message</strong>
+            <td><button onclick="openPopup()">View</button></td>
+        </tr>
+    </table>
+
+    <!-- Pop-up div for displaying the message -->
+    <div id="popup" class="popup">
+        <p>From Anonymous: <br>Account number:5192 6017 5695 2364<br>cvc:953<br>expire date:08/28 <br>Account number:Please wait 21:20pm for this information</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        // Function to open the pop-up
+        function openPopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'block';
+        }
+
+        // Function to close the pop-up
+        function closePopup() {
+            var popup = document.getElementById('popup');
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
