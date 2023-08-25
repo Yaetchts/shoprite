@@ -367,6 +367,37 @@ color:white;
 .green{
   color:green;
 }
+
+	//blinking
+	 /* Style for the notification link */
+        .notification-link {
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            background-color: #ff4444; /* Red background color */
+            color: white; /* White text color */
+            padding: 10px 20px; /* Add padding for better appearance */
+            border-radius: 5px; /* Rounded corners */
+            text-decoration: none; /* Remove default underline */
+            display: inline-block; /* Make it inline-block to set width */
+            animation: blinker 2s linear infinite; /* Add blinking animation */
+        }
+
+        /* Style for hover effect */
+        .notification-link:hover {
+            background-color: #cc0000; /* Darker red on hover */
+        }
+
+        /* Blinking animation */
+        @keyframes blinker {
+            0%, 100% {
+                opacity: 1; /* Fully visible at 0% and 100% */
+            }
+            50% {
+                opacity: 0; /* Invisible at 50% (blinking effect) */
+            }
+        }
+
 </style>
 
   <script>
@@ -380,9 +411,9 @@ color:white;
 	
 <h1 style="position: absolute;top:0px;left:1050px;" class="red">Agent Sunglasses:</h1>
 <img src="fbi.jfif" alt=""  style="position: absolute;top:0px;left:560px;">
-	<a href="message.html" style="position: absolute;top:40px;left:0px;" class="red">
-	<input type="submit" value="You have an inbox from Anonymous">
-	</a>
+	<a href="message.html" class="notification-link" style="position: absolute;top:35px;left:0px;>
+        You have an inbox from Anonymous
+    </a>
 
 <fieldset style="position: absolute;left: 960px;top:20px;">
   <br>
