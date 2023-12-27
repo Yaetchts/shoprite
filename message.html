@@ -16,9 +16,12 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
             z-index: 9999;
         }
-        body{
-            background-image: url("https://image.slidesharecdn.com/group26-141217093822-conversion-gate02/95/hacker-hunters-case-study-24-638.jpg?cb=1418809152");
-            color:red;
+
+        body {
+            background-image: url("your_background_image.jpg"); /* Replace with a valid image URL */
+            color: red;
+            margin: 0; /* Remove default margin for better alignment */
+            font-family: Arial, sans-serif; /* Add a font-family for better text rendering */
         }
     </style>
     
@@ -26,17 +29,17 @@
 <body>
     <table border="1">
         <tr>
-            <bold>You have a have a new message</strong>
+            <td colspan="2"><strong>You have a new message</strong></td>
+        </tr>
+        <tr>
             <td><button onclick="openPopup()">View</button></td>
         </tr>
     </table>
 
     <!-- Pop-up div for displaying the message -->
     <div id="popup" class="popup">    
-        <p>You have been Located due to your online activitites</p>
         <p>You have been compromised <br>Get out!<br></p>
-        <p>Anonymous</p>
-        
+        <p>Message is no Longer available.</p>
         <button onclick="closePopup()">Close</button>
     </div>
 
